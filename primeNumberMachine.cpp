@@ -36,10 +36,17 @@ using namespace std;
     
 int main()
 {
+    int lowerNumber;
+    int upperNumber;
+    cout << "Enter two numbers to find the number of prime number between them." << "\n";
+    cout << "Start with entering the smaller number: " << "\n";
+    cin >> lowerNumber;
+    cout << "Now enter the larger number: ";
+    cin >> upperNumber;
     //variable declarations for ints and booleans 
-    int oneBillion = 1000000000/(log(1000000000));
-    int twoBillion = 2000000000/(log(2000000000));
-    int difference = twoBillion - oneBillion;
+    lowerNumber = lowerNumber/(log(lowerNumber));
+    upperNumber = upperNumber/(log(upperNumber));
+    int difference = upperNumber - lowerNumber;
     bool on = true;
     
     //this while loop runs until there are 25 elements in the list
@@ -54,7 +61,7 @@ int main()
      count = 0;
     }
     
-    cout << "Number of Primes between 1 billion and 2 billion: " << difference << endl;
+    cout << "Number of Primes between " << lowerNumber << " and " << upperNumber <<  ": " << difference << endl;
     cout << "List of 25 Primes between 1 billion and 2 billion: " << endl;
     printList();
     return 0;
