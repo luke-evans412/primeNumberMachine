@@ -15,7 +15,7 @@ using namespace std;
         cout << item << " ";
      }
     }
-    //determines if the number is prime by calculating its factors
+    //determines if the number is prime by calculating its factors. n is the number being tested
     void factorPrime(){
         for(int i = 1; i <= 1000000000; i++)
         {
@@ -27,6 +27,7 @@ using namespace std;
                break;
             }
             if((i == 1000000000) && (count == 1)){
+                //push_back inserts n into the list of prime numbers
                 listOf25.push_back(n);
                 cout << n << " IS PRIME." << endl;
                 break;
@@ -38,7 +39,7 @@ int main()
 {
     int lowerNumber;
     int upperNumber;
-    cout << "Enter two numbers to find the number of prime number between them." << "\n";
+    cout << "Enter two numbers to find the number of prime numbers between them." << "\n";
     cout << "Start with entering the smaller number: " << "\n";
     cin >> lowerNumber;
     cout << "Now enter the larger number: ";
